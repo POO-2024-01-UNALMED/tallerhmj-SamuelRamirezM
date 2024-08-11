@@ -1,18 +1,15 @@
 package futbol;
 
 public class Jugador extends Futbolista {
-    //Atributos
     public short golesMarcados;
     public byte dorsal;
 
-    //Constructor 5 parámetros
     public Jugador(String nombre, int edad, String posicion, short golesMarcados, byte dorsal) {
         super(nombre, edad, posicion);
         this.golesMarcados = golesMarcados;
         this.dorsal = dorsal;
     }
 
-    //Constructor sin parámetros
     public Jugador() {
         this("Maradona", 30, "delantero", (short) 289, (byte) 7);
     }

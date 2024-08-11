@@ -1,11 +1,9 @@
 package futbol;
 
 public class Portero extends Futbolista {
-    //Atributos
     public short golesRecibidos;
     public byte dorsal;
 
-    //Constructor n parámetros
     public Portero(String nombre, int edad, short golesRecibidos, byte dorsal) {
         super(nombre, edad, "Portero");
         this.golesRecibidos = golesRecibidos;
