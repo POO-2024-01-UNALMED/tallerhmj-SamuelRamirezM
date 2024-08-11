@@ -21,11 +21,7 @@ public class Jugador extends Futbolista {
         return (this.getEdad() - f.getEdad());
     }
 
-    @Override
-    public boolean jugarConLasManos(Futbolista f) {
-        if (f instanceof Portero) {
-            return true;
-        }
+    public boolean jugarConLasManos() {
         return false;
     }
 

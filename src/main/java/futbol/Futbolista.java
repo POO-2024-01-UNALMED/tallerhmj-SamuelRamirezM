@@ -22,13 +22,10 @@ public abstract class Futbolista implements Comparable<Futbolista> {
     }
 
     public boolean equals(Futbolista f) {
-        if (f.getNombre().equals(this.nombre) && f.getEdad() == this.edad && f.getPosicion().equals(this.getPosicion())) {
-            return true;
-        }
-        return false;
+        return f.getNombre().equals(this.nombre) && f.getEdad() == this.edad && f.getPosicion().equals(this.getPosicion());
     }
 
-    public abstract boolean jugarConLasManos(Futbolista f);
+    public abstract boolean jugarConLasManos();
 
     //Getters - Setters
     public int getEdad() {
