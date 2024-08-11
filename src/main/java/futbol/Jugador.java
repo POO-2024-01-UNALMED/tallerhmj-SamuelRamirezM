@@ -1,3 +1,5 @@
+package futbol;
+
 public class Jugador extends Futbolista {
     //Atributos
     public short golesMarcados;
@@ -11,12 +13,21 @@ public class Jugador extends Futbolista {
     }
 
     //Constructor sin parámetros
-    //.....
-
+    public Jugador() {
+        this("Maradona", 30, "delantero", 289, 7);
+    }
 
     @Override
     public int compareTo(Futbolista o) {
-        return 0;
+        return Math.abs(this.getEdad() - o.getEdad());
+    }
+
+    @Override
+    public boolean jugarConLasManos(Futbolista f) {
+        if (f instanceof Portero) {
+            return true;
+        }
+        return false;
     }
 
     @Override
