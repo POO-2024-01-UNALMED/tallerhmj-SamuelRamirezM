@@ -14,10 +14,12 @@ public class Jugador extends Futbolista {
         this("Maradona", 30, "delantero", (short) 289, (byte) 7);
     }
 
+    @Override
     public int compareTo(Futbolista f) {
         return (this.getEdad() - f.getEdad());
     }
 
+    @Override
     public boolean jugarConLasManos() {
         return false;
     }
