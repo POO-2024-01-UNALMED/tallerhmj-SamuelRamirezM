@@ -14,12 +14,11 @@ public class Jugador extends Futbolista {
 
     //Constructor sin parámetros
     public Jugador() {
-        this("Maradona", 30, "delantero", 289, 7);
+        this("Maradona", 30, "delantero", (short) 289, (byte) 7);
     }
 
-    @Override
-    public int compareTo(Futbolista o) {
-        return Math.abs(this.getEdad() - o.getEdad());
+    public int compareTo(Futbolista f) {
+        return (this.getEdad() - f.getEdad());
     }
 
     @Override

@@ -1,19 +1,16 @@
 package futbol;
 
 public abstract class Futbolista implements Comparable<Futbolista> {
-    //Atributos
     private String nombre;
     private int edad;
     private final String posicion;
 
-    //Constructor 3 parámetros
     public Futbolista(String nombre, int edad, String posicion) {
         this.nombre = nombre;
         this.edad = edad;
         this.posicion = posicion;
     }
 
-    //Constructor sin parámetros
     public Futbolista() {
         this("Maradona", 30, "delantero");
     }
