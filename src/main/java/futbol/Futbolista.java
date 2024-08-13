@@ -17,12 +17,19 @@ public abstract class Futbolista implements Comparable<Futbolista> {
 
     @Override
     public String toString(){
-        return "El futbolista " + nombre + " tiene " + edad + ", juega de " + posicion;
+        return "El futbolista " + getNombre() + " tiene " + getEdad() + ", juega de " + getPosicion();
     }
 
-    public boolean equals(Futbolista f) {
-        return f.getNombre().equals(this.nombre) && f.getEdad() == this.edad && f.getPosicion().equals(this.getPosicion());
+    public boolean equals(Object o) {
+        if (this == o) return true;
+
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Futbolista f = (Futbolista) o;
+        return edad == f.edad && nombre.equals(f.nombre) && posicion.equals(f.posicion);
     }
+
+    public abstract int compareTo(Object o);
 
     public abstract boolean jugarConLasManos();
 
