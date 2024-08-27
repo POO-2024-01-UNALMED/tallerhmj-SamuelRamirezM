@@ -1,6 +1,6 @@
 package futbol;
 
-public abstract class Futbolista implements Comparable<Futbolista> {
+public abstract class Futbolista implements Comparable {
     private String nombre;
     private int edad;
     private final String posicion;
@@ -20,16 +20,13 @@ public abstract class Futbolista implements Comparable<Futbolista> {
         return "El futbolista " + getNombre() + " tiene " + getEdad() + ", juega de " + getPosicion();
     }
 
-    public boolean equals(Object o) {
+    public boolean equals(Futbolista o) {
         if (this == o) return true;
 
         if (o == null || getClass() != o.getClass()) return false;
 
-        Futbolista f = (Futbolista) o;
-        return edad == f.edad && nombre.equals(f.nombre) && posicion.equals(f.posicion);
+        return edad == o.edad && nombre.equals(o.nombre) && posicion.equals(o.posicion);
     }
-
-    public abstract int compareTo(Object o);
 
     public abstract boolean jugarConLasManos();
 
