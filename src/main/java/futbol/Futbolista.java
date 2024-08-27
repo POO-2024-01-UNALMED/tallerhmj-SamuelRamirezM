@@ -17,7 +17,7 @@ public abstract class Futbolista implements Comparable {
 
     @Override
     public String toString(){
-        return "El futbolista " + getNombre() + " tiene " + getEdad() + ", juega de " + getPosicion();
+        return "El futbolista " + nombre + " tiene " + edad + ", juega de " + posicion;
     }
 
     public boolean equals(Futbolista o) {
